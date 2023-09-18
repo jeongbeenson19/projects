@@ -19,10 +19,15 @@
                 <a href="{% url 'pybo:detail' question.id %}">
                     {{ question.subject }}
                 </a>
+                {% if question.answer_set.count > 0 %}
+                <span class="text-danger small ml-2">
+                    {{ question.answer_set.count }}
+                </span>
+                {% endif %}
             </td>
             <td>{{ question.create_date }}</td>
         </tr>
-        {% endfor %}
+        {% endfor %} 
         {% else %}
         <tr>
             <td colspan="3">질문이 없습니다.</td>
