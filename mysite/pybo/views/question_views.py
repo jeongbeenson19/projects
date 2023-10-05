@@ -16,7 +16,7 @@ def question_create(request):
         if form.is_valid():
             question = form.save(commit=False)
             question.author = request.user
-            question_create.date = timezone.now()
+            question.create_date = timezone.now()
             question.save()
             return redirect('pybo:index')
     else:

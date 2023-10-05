@@ -6,7 +6,7 @@ class QuestionForm(forms.ModelForm):
         model = Question
         fields = ['subject', 'content']
         labels = {
-            'subejct': '제목',
+            'subject': '제목',
             'content': '내용',
         }
 
