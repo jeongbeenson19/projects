@@ -1,1 +1,4 @@
-mysite/pybo/__pycache__/urls.cpython-38.pyc
+.idea
+db.sqlite3
+*.pyc
+__pycache__
