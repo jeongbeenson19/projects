@@ -8,7 +8,7 @@
             <nav id="sidebar" class="border-top border-secondary">
                 <div class="list-group">
                     {% for cat in category_list  %}
-                        {% if cat == category%}
+                        {% if cat == category %}
                             <a class="rounded-0 list-group-item list-group-item-action
                             list-group-item-light active" href="{{ cat.get_absolute_url }}">{{ cat.description }}</a>
                         {% else %}
@@ -138,7 +138,7 @@
                         {% endif %}
                     </ul>
                     <!-- 페이징 처리 끝 -->
-                    <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">
+                    <a href="{% url 'pybo:question_create'%}" class="btn btn-primary">
                         질문 등록하기
                     </a>
                     <form id="searchForm" method="get" action="{% url 'index' %}">

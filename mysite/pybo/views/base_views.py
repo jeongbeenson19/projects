@@ -22,13 +22,13 @@ def index(request, category_name='qna'):
     # 정렬
 
     if so == 'recommend':
-        question_list = Question.objects.annotate(
+        question_list = question_list.annotate(
             num_voter=Count('voter')).order_by('-num_voter', '-create_date')
     elif so == 'popular':
-        question_list = Question.objects.annotate(
+        question_list = question_list.annotate(
             num_answer=Count('answer')).order_by('-num_answer', '-create_date')
     else: # recent
-        question_list = Question.objects.order_by('-create_date')
+        question_list = question_list.order_by('-create_date')
     
     # 조회
     if kw:
